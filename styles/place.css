@@ -1,0 +1,233 @@
+
+
+:root {
+  /* Colors inspired by the landscape of Taraba */
+  --forest: #24402b;
+  --forest-dark: #182b1d;
+  --savanna: #a8763a;
+  --river: #2f6c74;
+  --parchment: #efe6d2;
+  --clay: #7a3b23;
+  --ink: #201c16;
+  --paper: #fbf8f1;
+
+  /* Typography */
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Work Sans", Arial, sans-serif;
+
+  /* Layout */
+  --max-width: 1100px;
+  --gap: 1.5rem;
+  --radius: 6px;
+}
+
+
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background-color: var(--paper);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: 1.15;
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  color: var(--forest-dark);
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  max-width: 68ch;
+}
+
+a {
+  color: var(--river);
+}
+
+.wrap {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+
+/* ==========================================================================
+   HEADER
+   ========================================================================== */
+
+.site-header {
+  background-color: var(--forest-dark);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+}
+
+.wordmark {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--parchment);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.site-nav a {
+  color: var(--parchment);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  color: var(--savanna);
+  text-decoration: underline;
+}
+
+
+/* ==========================================================================
+   HERO
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  color: var(--paper);
+}
+
+.hero picture {
+  display: block;
+}
+
+.hero-img {
+  display: block;
+  width: 100%;
+  height: 58vh;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(24, 43, 29, 0.1) 0%,
+    rgba(24, 43, 29, 0.8) 100%
+  );
+  pointer-events: none;
+}
+
+.hero-copy {
+  position: absolute;
+  z-index: 1;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.hero-copy h1 {
+  margin-bottom: 0.25rem;
+  color: var(--paper);
+  font-size: 2.6rem;
+}
+
+.tagline {
+  margin: 0;
+  color: var(--parchment);
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+
+/* ==========================================================================
+   ABOUT
+   ========================================================================== */
+
+.about {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   THINGS TO SEE
+   ========================================================================== */
+
+.see {
+  padding-bottom: 3rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+.card {
+  padding: 1.25rem 1.5rem;
+  background-color: var(--parchment);
+  border-left: 4px solid var(--savanna);
+  border-radius: var(--radius);
+}
+
+.card h3 {
+  color: var(--clay);
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   WEATHER
+   ========================================================================== */
+
+.weather {
+  padding: 2.5rem
+}

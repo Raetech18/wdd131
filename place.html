@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Jalingo, Taraba | Nigeria</title>
+
+  <meta
+    name="description"
+    content="Discover Jalingo, the capital of Taraba State, Nigeria, and explore the natural beauty and attractions of Taraba."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <p class="wordmark">Taraba</p>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#see">Things to See</a>
+        <a href="#weather">Weather</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <picture>
+        <source
+          media="(min-width: 800px)"
+          srcset="images/jalingo-hero-large.webp"
+        >
+
+        <source
+          media="(max-width: 799px)"
+          srcset="images/jalingo-hero-small.webp"
+        >
+
+        <img
+          src="images/jalingo-hero-large.webp"
+          alt="A welcome arch on the highway leading into Jalingo, capital of Taraba State, Nigeria"
+          class="hero-img"
+        >
+      </picture>
+
+      <div class="hero-copy wrap">
+        <h1>Jalingo, Taraba</h1>
+        <p class="tagline">Nature's gift to the nation</p>
+      </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about wrap">
+      <h2>Nigeria's Natural Treasure</h2>
+
+      <p>
+        Jalingo is the capital of Taraba State in northeastern Nigeria.
+        The city is surrounded by a landscape of savanna, farmland,
+        hills, and river valleys that give the state its distinctive
+        natural beauty.
+      </p>
+
+      <p>
+        I would like to visit Jalingo because it offers an opportunity
+        to experience a different part of Nigeria and explore the
+        beautiful landscapes and diverse cultures of Taraba State.
+        Beyond the capital, visitors can discover the Mambilla Plateau,
+        Gashaka-Gumti National Park, and other natural attractions.
+      </p>
+    </section>
+
+
+    <!-- THINGS TO SEE -->
+    <section id="see" class="see wrap">
+      <h2>Three Places to Explore</h2>
+
+      <div class="cards">
+
+        <article class="card">
+          <h3>Mambilla Plateau</h3>
+          <p>
+            The Mambilla Plateau is known for its high elevation,
+            cool climate, green hills, tea plantations, and scenic
+            mountain landscapes.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Gashaka-Gumti National Park</h3>
+          <p>
+            One of Nigeria's major protected natural areas, the park
+            contains forests, mountains, rivers, and a wide variety
+            of wildlife.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Chappal Waddi</h3>
+          <p>
+            Chappal Waddi is located in the Mambilla region of Taraba
+            State and is known for its dramatic mountainous landscape
+            and high elevation.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+
+    <!-- WEATHER -->
+    <section id="weather" class="weather">
+
+      <div class="wrap weather-inner">
+
+        <div class="weather-text">
+
+          <h2>
+            Weather
+            <span class="weather-icon" aria-hidden="true"></span>
+          </h2>
+
+          <p class="weather-location">
+            Jalingo, Taraba &mdash; typical conditions
+          </p>
+
+          <dl class="weather-stats">
+
+            <div>
+              <dt>Temperature</dt>
+              <dd id="temperature">24&deg;C</dd>
+            </div>
+
+            <div>
+              <dt>Wind speed</dt>
+              <dd id="wind-speed">4 mph</dd>
+            </div>
+
+            <div>
+              <dt>Wind chill</dt>
+              <dd id="wind-chill">--</dd>
+            </div>
+
+          </dl>
+
+        </div>
+
+        <img
+          src="images/weather-cloud.svg"
+          alt="Cloudy weather"
+          class="weather-icon-mobile"
+        >
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="wrap">
+
+      <p>
+        &copy; <span id="year"></span> Jalingo, Taraba, Nigeria
+      </p>
+
+      <p>
+        Last modified:
+        <span id="last-modified"></span>
+      </p>
+
+    </div>
+  </footer>
+
+</body>
+</html>
