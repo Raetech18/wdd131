@@ -1,5 +1,4 @@
 
-
 :root {
   /* Colors inspired by the landscape of Taraba */
   --forest: #24402b;
@@ -229,5 +228,157 @@ a {
    ========================================================================== */
 
 .weather {
-  padding: 2.5rem
+  padding: 2.5rem 0;
+  background-color: var(--river);
+  color: var(--paper);
+}
+
+.weather-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.weather h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--paper);
+}
+
+.weather-location {
+  margin-top: -0.5rem;
+  color: var(--parchment);
+  font-style: italic;
+}
+
+/* Wide-screen weather icon */
+.weather-icon::after {
+  content: "⛅";
+  font-size: 1.6rem;
+}
+
+.weather-stats {
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 0 0;
+}
+
+.weather-stats dt {
+  color: var(--parchment);
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.weather-stats dd {
+  margin: 0.15rem 0 0;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* SVG weather icon for smaller screens */
+.weather-icon-mobile {
+  display: none;
+  width: 64px;
+  height: 64px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.site-footer {
+  padding: 1.5rem 0;
+  background-color: var(--forest-dark);
+  color: var(--parchment);
+  font-size: 0.85rem;
+}
+
+.site-footer p {
+  margin: 0.2rem 0;
+}
+
+
+/* ==========================================================================
+   RESPONSIVE DESIGN
+   ========================================================================== */
+
+/* Mobile */
+@media (max-width: 599px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  .site-nav a {
+    font-size: 0.9rem;
+  }
+
+  .hero-img {
+    height: 50vh;
+    min-height: 280px;
+  }
+
+  .hero-copy h1 {
+    font-size: 1.9rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .weather-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Hide the wide-screen pseudo-element on mobile */
+  .weather-icon::after {
+    display: none;
+  }
+
+  /* Show the required SVG on mobile */
+  .weather-icon-mobile {
+    display: block;
+  }
+
+  .weather-stats {
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* Wider screens */
+@media (min-width: 700px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+/* Large screens */
+@media (min-width: 900px) {
+  .hero-copy h1 {
+    font-size: 3.2rem;
+  }
+
+  .about {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .see {
+    padding-bottom: 4rem;
+  }
 }
