@@ -63,7 +63,7 @@ const temples = [
         dedicated: "1893, April, 6",
         area: 253015,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/salt-lake/400x250/salt-lake-temple-lds-104505-wallpaper.jpg"
+            "https://churchofjesuschristtemples.org/salt-lake-temple/"
     },
 
     // Additional temple 2
@@ -73,17 +73,18 @@ const temples = [
         dedicated: "1984, September, 25",
         area: 26683,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manila-philippines/400x250/manila-philippines-temple-lds-4356-wallpaper.jpg"
+            "https://www.churchofjesuschrist.org/temples/details/manila-philippines-temple"
     },
 
     // Additional temple 3
     {
+
         templeName: "Accra Ghana",
         location: "Accra, Ghana",
         dedicated: "2004, January, 11",
         area: 17500,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/accra-ghana/400x250/accra-ghana-temple-lds-78880-wallpaper.jpg"
+            "https://www.churchofjesuschrist.org/temples/details/accra-ghana-temple"
     }
 ];
 
