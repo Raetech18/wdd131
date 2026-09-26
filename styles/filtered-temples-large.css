@@ -1,0 +1,68 @@
+@media screen and (min-width: 700px) {
+
+    .header-container {
+        padding: 1.2rem 2rem;
+    }
+
+    header h2 {
+        font-size: 2rem;
+    }
+
+    /* Hide hamburger on larger screens */
+    #menu-button {
+        display: none;
+    }
+
+    /* Desktop navigation */
+    nav {
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        padding: 0.6rem 1rem;
+    }
+
+    /* Main content */
+    main {
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Two-column temple layout */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    /* Temple card hover effect */
+    figure {
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.18);
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    /* Three-column temple layout */
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main {
+        max-width: 1200px;
+    }
+}
