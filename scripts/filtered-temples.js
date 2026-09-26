@@ -63,7 +63,7 @@ const temples = [
         dedicated: "1893, April, 6",
         area: 253015,
         imageUrl:
-            "https://www.churchofjesuschrist.org/media/image/salt-lake-temple-e04d565?lang=eng"        
+            "images/salt-lake-city-temple.jpg"        
     },
 
     // Additional temple 2
@@ -73,7 +73,7 @@ const temples = [
         dedicated: "1984, September, 25",
         area: 26683,
         imageUrl:
-            "https://www.churchofjesuschrist.org/media/image/manila-philippines-temple-lds-de7a429?lang=eng"
+            "images/manila-philippines-temple.jpg"
     },
 
     // Additional temple 3
@@ -84,7 +84,7 @@ const temples = [
         dedicated: "2004, January, 11",
         area: 17500,
         imageUrl:
-            "https://www.churchofjesuschrist.org/media/image/accra-ghana-temple-lds-ea81753?lang=eng"
+            "images/accra-ghana-temple.jpg"
     }
 ];
 
