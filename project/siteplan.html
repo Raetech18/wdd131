@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ajo Tracker | Website Plan</title>
+  <meta name="description" content="Website plan for Ajo Tracker, a digital contribution tracker for ajo (esusu) savings groups: name, purpose, scenarios, colors, fonts and wireframes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&amp;family=Nunito+Sans:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header>
+    <div class="wrap">
+      <svg class="logo" viewBox="0 0 120 120" role="img" aria-label="Ajo Tracker logo: a ring of six members with one gold member whose turn it is to receive the pot">
+        <circle cx="60" cy="60" r="40" fill="none" stroke="#f7f8fb" stroke-width="3"/>
+        <circle cx="60" cy="20" r="11" fill="#f2b632"/>
+        <circle cx="94.6" cy="40" r="9" fill="#f7f8fb"/>
+        <circle cx="94.6" cy="80" r="9" fill="#f7f8fb"/>
+        <circle cx="60" cy="100" r="9" fill="#f7f8fb"/>
+        <circle cx="25.4" cy="80" r="9" fill="#f7f8fb"/>
+        <circle cx="25.4" cy="40" r="9" fill="#f7f8fb"/>
+      </svg>
+      <div>
+        <h1>Ajo Tracker</h1>
+        <p>Website plan for WDD 131, W05 project</p>
+      </div>
+    </div>
+  </header>
+
+  <nav aria-label="Sections of this plan">
+    <ul class="toc">
+      <li><a href="#name">Site name</a></li>
+      <li><a href="#purpose">Purpose</a></li>
+      <li><a href="#scenarios">Scenarios</a></li>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#type">Typography</a></li>
+      <li><a href="#wireframes">Wireframes</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section id="name">
+      <h2>Site name</h2>
+      <p><strong>Ajo Tracker</strong></p>
+      <p>Ajo is the Yoruba word for a rotating savings group, also called esusu in other parts of West Africa. The name tells a visitor in two words what the site does and who it is for. "Tracker" says that the site keeps count of the money so members do not have to.</p>
+      <p>The logo is a ring of six members. One member is gold: the person whose turn it is to receive the pot. It shows the rotation that makes an ajo work.</p>
+      <p class="note">Optional domain idea: <strong>ajotracker.ng</strong> (availability not checked).</p>
+    </section>
+
+    <section id="purpose">
+      <h2>Site purpose</h2>
+      <p>Many ajo groups still track contributions in notebooks, messy spreadsheets or WhatsApp threads, which leads to disputes and missed payments. Ajo Tracker gives a group one clear place to learn how an ajo works and to manage and monitor their own.</p>
+      <p>The site will provide:</p>
+      <ul>
+        <li>A summary of total contributions, outstanding payments and the group's savings position.</li>
+        <li>A payout schedule page that works out whose turn it is to receive the pot, based on the number of members and the rounds completed.</li>
+        <li>A form to add members and record contributions, saved in the browser with localStorage.</li>
+        <li>A short guide that explains ajo for people who are new to it.</li>
+      </ul>
+      <h3>Planned pages</h3>
+      <ul>
+        <li><strong>Home:</strong> the current turn, group summary and a short explanation of ajo.</li>
+        <li><strong>Tracker:</strong> member list, contribution form and outstanding payments.</li>
+        <li><strong>Payout schedule:</strong> the full rotation and who receives the pot next.</li>
+        <li><strong>References:</strong> sources for any text or images, linked in the footer.</li>
+      </ul>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <p>Questions a typical visitor, such as an ajo coordinator or a member, would ask:</p>
+      <ul>
+        <li>Whose turn is it to collect the pot this round?</li>
+        <li>Who has not paid their contribution yet, and how much is still outstanding?</li>
+        <li>How much has the group saved so far, and how many rounds are left?</li>
+        <li>I am new to ajo. How does it work, and how do I start a group?</li>
+      </ul>
+    </section>
+
+    <section id="colors">
+      <h2>Color schema</h2>
+      <p>The palette comes from adire indigo cloth and the gold of the coins in the pot. It is used on this document.</p>
+      <ul class="swatches">
+        <li>
+          <span class="chip indigo" role="img" aria-label="Indigo swatch"></span>
+          <span><strong>Adire indigo #1B2A6B</strong><br>Headings, body text, header and footer backgrounds, and logo.</span>
+        </li>
+        <li>
+          <span class="chip gold" role="img" aria-label="Gold swatch"></span>
+          <span><strong>Pot gold #F2B632</strong><br>Accent for the current turn, buttons, the navigation bar and keyboard focus outlines. Used only as a background or outline, always with indigo text.</span>
+        </li>
+        <li>
+          <span class="chip paper" role="img" aria-label="Paper white swatch"></span>
+          <span><strong>Paper #F7F8FB</strong><br>Page background and text on indigo.</span>
+        </li>
+        <li>
+          <span class="chip green" role="img" aria-label="Green swatch"></span>
+          <span><strong>Paid green #17724A</strong><br>Paid status messages and confirmations on the tracker pages.</span>
+        </li>
+        <li>
+          <span class="chip soft" role="img" aria-label="Muted indigo-grey swatch"></span>
+          <span><strong>Soft ink #4A5170</strong><br>Captions, hints and other secondary text.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="type">
+      <h2>Typography</h2>
+      <div class="font-sample">
+        <p class="big head-font">Bricolage Grotesque Bold</p>
+        <p><strong>Used for:</strong> the site name, page titles, section headings and the big numbers in the summary. Its slightly quirky shapes give the site a friendly, local feel.</p>
+      </div>
+      <div class="font-sample">
+        <p class="big body-font">Nunito Sans Regular and Bold</p>
+        <p><strong>Used for:</strong> paragraphs, navigation, form labels, buttons and table text. It is clear at small sizes on phones.</p>
+      </div>
+      <p>Fallbacks: Trebuchet MS for headings, and Segoe UI or Arial for body text, both with the generic sans-serif family as a last resort.</p>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <p>Home page layouts. The gold shape marks the current turn, which is the main focus of the page.</p>
+      <div class="wires">
+        <figure class="wire-mobile">
+          <svg viewBox="0 0 200 360" role="img" aria-label="Mobile wireframe: header with menu button, a ring showing the current turn with a view schedule button, three stacked summary boxes, a short explanation block and a footer">
+            <rect class="wf-box" x="8" y="8" width="184" height="344" rx="8"/>
+            <rect class="wf-fill" x="16" y="16" width="168" height="26"/>
+            <text class="wf-text" x="24" y="33">Ajo Tracker</text>
+            <text class="wf-text" x="150" y="33">Menu</text>
+            <circle class="wf-box" cx="100" cy="94" r="30"/>
+            <circle class="wf-gold" cx="100" cy="64" r="8"/>
+            <text class="wf-text" x="70" y="132">Next to collect</text>
+            <rect class="wf-gold" x="56" y="140" width="88" height="20" rx="4"/>
+            <text class="wf-text" x="68" y="154">View schedule</text>
+            <rect class="wf-box" x="20" y="172" width="160" height="30"/>
+            <text class="wf-text" x="28" y="191">Total contributions</text>
+            <rect class="wf-box" x="20" y="208" width="160" height="30"/>
+            <text class="wf-text" x="28" y="227">Outstanding</text>
+            <rect class="wf-box" x="20" y="244" width="160" height="30"/>
+            <text class="wf-text" x="28" y="263">Savings position</text>
+            <rect class="wf-fill" x="20" y="282" width="160" height="38"/>
+            <text class="wf-text" x="28" y="304">What is ajo?</text>
+            <rect class="wf-fill" x="16" y="328" width="168" height="18"/>
+            <text class="wf-text" x="24" y="340">Footer + references</text>
+          </svg>
+          <figcaption>Mobile view: one column, summary boxes stacked.</figcaption>
+        </figure>
+
+        <figure>
+          <svg viewBox="0 0 480 300" role="img" aria-label="Desktop wireframe: header with navigation links, hero with text and button on the left and the turn ring on the right, a row of three summary boxes, two columns for the guide and schedule preview, and a footer">
+            <rect class="wf-box" x="6" y="6" width="468" height="288" rx="8"/>
+            <rect class="wf-fill" x="14" y="14" width="452" height="28"/>
+            <text class="wf-text" x="24" y="32">Ajo Tracker</text>
+            <text class="wf-text" x="300" y="32">Home</text>
+            <text class="wf-text" x="342" y="32">Tracker</text>
+            <text class="wf-text" x="392" y="32">Schedule</text>
+            <rect class="wf-box" x="24" y="58" width="250" height="84"/>
+            <text class="wf-text" x="34" y="82">Headline: whose turn is it?</text>
+            <text class="wf-text" x="34" y="98">Short intro text</text>
+            <rect class="wf-gold" x="34" y="110" width="90" height="20" rx="4"/>
+            <text class="wf-text" x="44" y="124">View schedule</text>
+            <circle class="wf-box" cx="370" cy="100" r="40"/>
+            <circle class="wf-gold" cx="370" cy="60" r="10"/>
+            <text class="wf-text" x="338" y="152">Next to collect</text>
+            <rect class="wf-box" x="24" y="164" width="140" height="36"/>
+            <text class="wf-text" x="32" y="186">Total contributions</text>
+            <rect class="wf-box" x="170" y="164" width="140" height="36"/>
+            <text class="wf-text" x="178" y="186">Outstanding</text>
+            <rect class="wf-box" x="316" y="164" width="140" height="36"/>
+            <text class="wf-text" x="324" y="186">Savings position</text>
+            <rect class="wf-fill" x="24" y="212" width="214" height="48"/>
+            <text class="wf-text" x="32" y="240">What is ajo?</text>
+            <rect class="wf-fill" x="244" y="212" width="212" height="48"/>
+            <text class="wf-text" x="252" y="240">Schedule preview</text>
+            <rect class="wf-fill" x="14" y="268" width="452" height="18"/>
+            <text class="wf-text" x="24" y="280">Footer + references link</text>
+          </svg>
+          <figcaption>Desktop view: hero split in two, summary in one row, two content columns.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Racheal Pelumi Nwachukwu | WDD 131 W05 Project</p>
+  </footer>
+</body>
+</html>

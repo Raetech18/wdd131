@@ -1,0 +1,89 @@
+:root {
+  --indigo: #1b2a6b;
+  --gold: #f2b632;
+  --paper: #f7f8fb;
+  --ink-soft: #4a5170;
+  --green: #17724a;
+  --line: #d5d9e8;
+  --font-head: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --font-body: "Nunito Sans", "Segoe UI", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--indigo);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 0.5em;
+}
+
+h1 { font-size: clamp(2rem, 6vw, 3.25rem); }
+h2 { font-size: 1.6rem; }
+h3 { font-size: 1.15rem; }
+
+p, li { max-width: 68ch; }
+p { margin: 0 0 1em; }
+a { color: var(--indigo); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:focus-visible, .skip:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+.skip { position: absolute; left: -999px; background: var(--gold); color: var(--indigo); padding: 0.5rem 1rem; }
+.skip:focus { left: 0; top: 0; z-index: 10; }
+
+header { background: var(--indigo); color: var(--paper); padding: 2rem 1.25rem; }
+header .wrap { display: grid; gap: 1.25rem; align-items: center; }
+header p { color: var(--paper); margin: 0; }
+.logo { width: 112px; height: 112px; }
+
+main, .wrap { max-width: 64rem; margin: 0 auto; }
+main { padding: 0 1.25rem 2rem; }
+
+section { padding: 2rem 0; border-bottom: 2px solid var(--line); }
+section:last-child { border-bottom: 0; }
+
+.toc { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; padding: 1rem 1.25rem; margin: 0; list-style: none; background: var(--gold); }
+.toc a { font-weight: 700; color: var(--indigo); }
+
+.note { border-left: 6px solid var(--gold); padding: 0.25rem 0 0.25rem 1rem; }
+
+.swatches { display: grid; gap: 1rem; padding: 0; list-style: none; }
+.swatches li { display: grid; grid-template-columns: 5rem 1fr; gap: 1rem; align-items: start; }
+.chip { height: 5rem; border: 2px solid var(--indigo); border-radius: 0.5rem; }
+.chip.indigo { background: var(--indigo); }
+.chip.gold { background: var(--gold); }
+.chip.paper { background: var(--paper); }
+.chip.green { background: var(--green); }
+.chip.soft { background: var(--ink-soft); }
+
+.font-sample { padding: 1rem 1.25rem; border: 2px solid var(--line); border-radius: 0.5rem; margin-bottom: 1rem; background: #fff; }
+.font-sample .big { font-size: 1.9rem; margin: 0 0 0.25rem; }
+.head-font { font-family: var(--font-head); font-weight: 700; }
+.body-font { font-family: var(--font-body); }
+
+.wires { display: grid; gap: 2rem; }
+.wires figure { margin: 0; }
+.wires svg { width: 100%; height: auto; background: #fff; border: 2px solid var(--line); border-radius: 0.5rem; }
+.wires figcaption { margin-top: 0.5rem; color: var(--ink-soft); }
+.wire-mobile svg { max-width: 18rem; }
+
+.wf-box { fill: none; stroke: var(--indigo); stroke-width: 1.5; }
+.wf-fill { fill: var(--line); stroke: var(--indigo); stroke-width: 1.5; }
+.wf-gold { fill: var(--gold); stroke: var(--indigo); stroke-width: 1.5; }
+.wf-text { font-family: var(--font-body); font-size: 9px; fill: var(--indigo); }
+
+footer { background: var(--indigo); color: var(--paper); padding: 1.5rem 1.25rem; }
+footer p { margin: 0 auto; max-width: 64rem; }
+
+@media (min-width: 48rem) {
+  header .wrap { grid-template-columns: auto 1fr; gap: 2rem; }
+  .wires { grid-template-columns: 1fr 2fr; align-items: start; }
+  .swatches { grid-template-columns: 1fr 1fr; }
+}
