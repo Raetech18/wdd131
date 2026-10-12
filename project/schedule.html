@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="View and manage a rotating savings group payout order with Ajo Tracker.">
+  <meta name="author" content="Racheal Pelumi Nwachukwu">
+  <title>Ajo Tracker | Payout Schedule</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/ajo-tracker.css">
+  <script src="scripts/ajo-tracker.js" defer></script>
+</head>
+
+<body data-page="schedule">
+  <a class="skip" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" aria-label="Ajo Tracker home">
+        <svg class="logo" viewBox="0 0 120 120" role="img" aria-label="A ring of six savings group members">
+          <circle cx="60" cy="60" r="40" fill="none" stroke="#f7f8fb" stroke-width="3"/>
+          <circle cx="60" cy="20" r="11" fill="#f2b632"/>
+          <circle cx="94.6" cy="40" r="9" fill="#f7f8fb"/>
+          <circle cx="94.6" cy="80" r="9" fill="#f7f8fb"/>
+          <circle cx="60" cy="100" r="9" fill="#f7f8fb"/>
+          <circle cx="25.4" cy="80" r="9" fill="#f7f8fb"/>
+          <circle cx="25.4" cy="40" r="9" fill="#f7f8fb"/>
+        </svg>
+
+        <span>
+          <span class="brand-name">Ajo Tracker</span>
+          <span class="brand-tagline">Small contributions. Shared progress.</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        Menu
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="members.html">Member tracker</a>
+        <a href="schedule.html" aria-current="page">Payout schedule</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap page-content">
+    <section class="page-intro">
+      <p class="eyebrow">The rotation</p>
+      <h1>Payout schedule</h1>
+      <p>
+        See who is next to receive the group pot. The order starts with the
+        first member added. Use the controls to move a member up or down to
+        match your group's agreed order.
+      </p>
+    </section>
+
+    <section class="schedule-controls content-panel">
+      <div>
+        <p class="eyebrow">Rotation settings</p>
+        <h2>Plan your rounds</h2>
+        <p class="muted">
+          Set an optional first payout date and the interval between rounds.
+          Dates are for planning and do not trigger payments.
+        </p>
+      </div>
+
+      <form id="schedule-settings-form" class="settings-form">
+        <div class="form-field">
+          <label for="first-payout-date">First payout date</label>
+          <input
+            id="first-payout-date"
+            name="firstPayoutDate"
+            type="date"
+          >
+        </div>
+
+        <div class="form-field">
+          <label for="round-frequency">Frequency</label>
+          <select id="round-frequency" name="roundFrequency">
+            <option value="7">Weekly</option>
+            <option value="14">Every two weeks</option>
+            <option value="30">Monthly (30 days)</option>
+          </select>
+        </div>
+
+        <button class="button" type="submit">Update schedule</button>
+
+        <p
+          id="schedule-message"
+          class="form-message"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </section>
+
+    <section class="payout-highlight" aria-labelledby="next-payout-heading">
+      <div class="payout-icon" aria-hidden="true">₦</div>
+
+      <div>
+        <p class="eyebrow">Next in line</p>
+        <h2 id="next-payout-heading">Add members to build your schedule</h2>
+        <p id="next-payout-summary">
+          Your payout rotation will appear here.
+        </p>
+      </div>
+    </section>
+
+    <section class="content-panel" aria-labelledby="completed-round-heading">
+      <p class="eyebrow">Track your progress</p>
+      <h2 id="completed-round-heading">Payout round progress</h2>
+      <p class="muted">
+        After the group has completed a payout round, use the button below
+        to record it and move to the next member. This only updates your
+        tracker; it does not make or confirm a payment.
+      </p>
+
+      <button
+        class="button"
+        id="complete-payout-round"
+        type="button"
+      >
+        Mark payout round as completed
+      </button>
+    </section>
+
+    <section aria-labelledby="schedule-table-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">All rounds</p>
+          <h2 id="schedule-table-title">Payout rotation</h2>
+        </div>
+
+        <p class="muted">
+          The projected pot is calculated from the expected contribution
+          per member for each round.
+        </p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <caption>
+            Payout order, member, estimated pot, planned date, and order controls
+          </caption>
+
+          <thead>
+            <tr>
+              <th scope="col">Round</th>
+              <th scope="col">Member receiving pot</th>
+              <th scope="col">Projected pot</th>
+              <th scope="col">Planned date</th>
+              <th scope="col">Change order</th>
+            </tr>
+          </thead>
+
+          <tbody id="schedule-table-body">
+            <tr>
+              <td colspan="5">Add members to see the payout schedule.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p id="schedule-empty-note" class="muted small">
+        To add members, visit the
+        <a href="members.html">Member Tracker</a>.
+      </p>
+    </section>
+
+    <section class="content-panel">
+      <h2>Before your group begins</h2>
+      <ul class="check-list">
+        <li>Agree on the contribution amount and due date.</li>
+        <li>Confirm the payout order with every member.</li>
+        <li>Decide how missed or late contributions will be handled.</li>
+        <li>Keep a separate, secure record of any real financial agreements.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>
+        © <span id="current-year">2026</span> Ajo Tracker —
+        WDD 131 project by Racheal Pelumi Nwachukwu
+      </p>
+      <p>Demo only. Keep real financial and personal information private.</p>
+      <a href="references.html">References and image credits</a>
+    </div>
+  </footer>
+</body>
+</html>
